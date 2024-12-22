@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(#da3b3b, #ad2121,#470a0a );
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Añadido para controlar el espacio desde arriba */
+
+}
+
+.star {
+  margin-top: 230px;
+  width: 9.5rem;
+  height: 9.5rem;
+  background: #732383;
+  transform: translate(0.3rem, 9.75rem);
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  animation: animar 0.8s linear infinite;
+  z-index: 999;
+}
+.branch2 {
+  width: 3.6rem;
+  height: 4.8rem;
+  background: #c91224;
+  transform: translate(0.21rem, 9.6rem);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 85%);
+  animation: animar 0.8s linear infinite;
+  z-index: 999;
+}
+.branch3 {
+  width: 5.25rem;
+  height: 4.5rem;
+  background: #c0cd0e;
+  transform: translate(0.45rem, 7.8rem);
+  clip-path: polygon(15% 24%, 75% 0, 100% 100%, 0 80%);
+  animation: animar 0.8s linear infinite;
+  z-index: 999;
+}
+.branch4 {
+  width: 6.75rem;
+  height: 3rem;
+  background: #fff200;
+  transform: translate(0.285rem, 6rem);
+  clip-path: polygon(12% 0, 90% 31%, 100% 100%, 0% 100%);
+  animation: animar 0.8s linear infinite;
+  z-index: 999;
+}
+.branch5 {
+  width: 7.8rem;
+  height: 3rem;
+  background: #732383;
+  transform: translate(0.405rem, 4.95rem);
+  clip-path: polygon(6% 0, 90% 0, 100% 100%, 0 50%);
+  animation: animar 0.8s linear infinite;
+  z-index: 999;
+}
+.branch6 {
+  width: 9.6rem;
+  height: 3.9rem;
+  background: #732383;
+  transform: translateY(2.7rem);
+  clip-path: polygon(13% 0, 95% 40%, 100% 72%, 0% 95%);
+  animation: animar 0.8s linear infinite;
+  z-index: 999;
+}
+.branch7 {
+  width: 13.5rem;
+  height: 5.25rem;
+  background: #ab0606;
+  transform: translateY(1.2rem);
+  clip-path: polygon(13% 19%, 87% 0, 100% 90%, 0% 100%);
+  animation: animar 0.8s linear infinite;
+  z-index: 999;
+}
+.branch8 {
+  width: 16.8rem;
+  height: 5.25rem;
+  background: #732383;
+  transform: translate(0.3rem, -1.5rem);
+  clip-path: polygon(12% 10%, 88% 25%, 100% 95%, 0 90%);
+  animation: animar 0.8s linear infinite;
+  z-index: 999;
+}
+
+/* ===== Animación Ramas  */
+@keyframes animar {
+  from {
+    background: var(--color);
+  }
+}
+/* =====  Texto  */
+.text {
+  font-weight: bold;
+  font-family: "Vibes";
+  font-size: 4.5rem;
+  transform: translateY(-1rem);
+  animation: background 5s linear infinite;
+  text-align: center;
+  background: linear-gradient(
+    90deg,
+    #f1ce07 0%,
+    #079beb 20%,
+    #51f60a 40%,
+    #0216ee 60%,
+    #f18407 80%,
+    #ac4607 100%
+  );
+  background-size: 500% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* ===== Animación texto  */
+@keyframes background {
+  0% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+/* ============== Nieve  */
+i {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.563);
+  border-radius: 50%;
+  box-shadow: 0 0 7px rgb(253, 253, 253, 0.2);
+  top: -10px;
+  animation: snowing 20s linear infinite;
+}
+@keyframes snowing {
+  0% {
+    top: -10px;
+  }
+  100% {
+    top: calc(100vh + 10px);
+  }
+}
